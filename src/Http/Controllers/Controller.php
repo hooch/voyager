@@ -52,7 +52,7 @@ abstract class Controller extends BaseController
                         : [];
 
         foreach ($rows as $row) {
-            $options = json_decode($row->details);
+            $options = json_decode($row->details); //options is for multi-selects
 
             // if the field for this row is absent from the request, continue
             // checkboxes will be absent when unchecked, thus they are the exception
